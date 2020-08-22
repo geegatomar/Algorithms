@@ -1,0 +1,3 @@
+At each node, we have a decision to make.
+Based on the decision we make at a node, the input for the next node reduces becuase we have taken a decision here.
+And we go on deeper taking more decisions on the shrinking input unitl it eventually becomes zero 

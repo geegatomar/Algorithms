@@ -1,0 +1,8 @@
+Visiting component : 1
+8 9 
+Visiting component : 2
+10 
+Visiting component : 3
+1 4 3 2 
+Visiting component : 4
+5 7 6 

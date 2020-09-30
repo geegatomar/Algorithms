@@ -35,7 +35,7 @@ void dfs2(int node, int prev)
 		sum += pq.top();
 		pq.pop();
 		n--;
-		cout << node << " " << sum << endl;
+		//cout << node << " " << sum << endl;
 	}
 	maxLength[node] = (2 - n) + sum;
 }

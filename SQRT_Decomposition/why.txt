@@ -1,0 +1,3 @@
+Why we have this algorithm/technique?
+Its used to answer range queries. Yes, segment tree / fenwick tree are also used for the same range queries as well
+

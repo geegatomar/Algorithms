@@ -64,7 +64,10 @@ void SOLVE()
 
 	cout << res[0][0] * 1 + res[0][1] * 1;
 }
- 
+
+
+// Time complexity of matrix exponentiation is O(logn * s^3), where s is the dimension of the matrix
+
 
 int32_t main()
 {

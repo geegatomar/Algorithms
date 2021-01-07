@@ -1,0 +1,86 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MATH FOR CP
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fermats Little Theorem (used to calculate numbers to very high powers, modulo a prime number)
+	
+	A ^ (M-1) mod M = 1				(Note M (the modulo number) should be prime)
+	
+ex:
+	We want to calculate (2 ^ (16)) mod (17), it would be 1
+	
+	Now if we want (2 ^ (50)) mod (17), then we'll factorize the exponent(power) as:
+		2 ^ 50  ==  2 ^ (16*3 + 2)  ==   2^16  + 2^2  == 2^2
+		
+		Hence the answer is contributed only by the remainder of exponent with modulo (M - 1)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Euclidean Algorithm
+ 
+Logarithmic way of finding the gcd in log(min(a, b)) time
+
+	gcd(a, b) ===> return b ? return (b, a % b) : a;
+	
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Extended Euclidean Algorithm
+
+
+int gcd(int a, int b, int &x, int &y)
+{
+    cout << a << " " << b << endl;
+    if(b == 0)
+    {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    int x1, y1;
+    int g = gcd(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1*(a / b);
+
+    return g;
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Linear Diophantine equation
+
+
+For finding the solutions (x, y) to the equation:
+	ax + by = c			(where a, b, c are constants)
+	
+From the extended euclidean algorithm, we can say that this eqn has a solution only if c is a a multiple of the gcd(a, b).
+So the solutions for a(x0 * c/g) + b(y0 * c/g) = g * c/g
+	would be x0 * c/g and y0 * c/g
+	
+So the other solutions are obtained from x0*c/g + b*c/g    and   y0*c/g - a*c/g
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+Sieve of Erasthosenes
+
+
+void sieve(int n)
+{
+    for(int i = 2; i <= n; i++)
+    {
+        if(prime[i])
+        {
+            for(int j = i*i; j <= n; j += i)
+                prime[j] = false;
+        }
+    }
+}
+	
+
+Finds all prime numbers upto n in O(n loglogn) time
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+

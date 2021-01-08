@@ -66,7 +66,7 @@ Sieve of Erasthosenes
 
 void sieve(int n)
 {
-    for(int i = 2; i <= n; i++)
+    for(int i = 2; i <= sqrt(n); i++)
     {
         if(prime[i])
         {
@@ -79,8 +79,16 @@ void sieve(int n)
 
 Finds all prime numbers upto n in O(n loglogn) time
 
+The outer loop can also go upto just sqrt(n) [though this will not improve time complexity since theres a logarithmic term]
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Segmented Seive
 
+To find the prime numbers in a given range, given R-L < 10^6   (though R and L can be ~~10^15)
 
+First, get all the primes in range between 2 to sqrt(R), (this can be done using normal sieve)
+Then mark all the multiples of these primes in the range L to R, again using the normal sieve method
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

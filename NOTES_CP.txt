@@ -92,3 +92,34 @@ Then mark all the multiples of these primes in the range L to R, again using the
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+To check if number is prime or not
+
+Naive algo, iterate and check if (n % i == 0) 		==> O(sqrt(n))
+Using sieve of erasthosenes, 				==> O(n loglogn)
+Fermat primality test					==> O()     
+	By fermats thrm, 	(a^p - a)mod p == 0	,	a^(p - 1) modp == 1	for p prime
+	
+	[if (a^p - a)mod p is 0 then its most likely that p is prime, but we cannot say for sure(since it mayy be possible for a composite too.
+	But if this value is not zero, then for sure its composite, and is not prime]
+Miller Rabin Primality Test				==> O(logn)
+
+
+Both Fermat and Miller Rabin test for "if number is definitely not prime". We say that its probably prime with these theorems, but we are not 100% sure.
+And they can for sure detect a composite number
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Euler Totient Function(ETF)
+
+Its used to find the number of integers from 2 to n, which are coprime with n. Also, for prime number n, the euler totient function of n will be n - 1.
+
+Naive, iterate over and check gcd to be 1 with n 					=> O(nlogn)
+It can be done by prime factorizing and expressing as product of those primes  	=> O(sqrt(n))
+
+To find ETF for each number from 1 to n:
+	naive, using the sqrt above for each	=> O(n sqrt(n))
+	using the sieve like method 		=> O(n loglogn)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

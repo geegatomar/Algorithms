@@ -1,0 +1,8 @@
+NOTE: VERY IMPORTANT POINTS (for Segment Trees)
+
+1. This implementation of segment trees is 1 - indexed
+2. Make sure to pass the vector by reference, otherwise it gives TLE
+3. Take case of point updates and range updates, and point assigns and range assigns
+4. After doing updates, always remember to merge both child nodes to get my node's value
+5. Very Imp to initialize lazy vector to zero
+6. Note the "push" for range assigns and range updates are also very different

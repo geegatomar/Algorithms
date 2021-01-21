@@ -46,7 +46,7 @@ class segtree
     }
 
     // BUILD
-    void build(vector<int> a, int i, int tl, int tr)
+    void build(vector<int> &a, int i, int tl, int tr)
     {
         if (tl == tr)
         {

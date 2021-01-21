@@ -1,2 +1,2 @@
 # Algorithms
-Basic Algorithms and their implementation in C and C++
+Basic and Advanced Algorithms and their implementation in C and C++
